@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Grupo 5 de Lab.</title>
   <link rel="stylesheet" href="css/style.css">
+
   <style>
-    /* Estilo del loader */
+    /* Loader */
     #loader {
       position: fixed;
       top: 0;
@@ -39,32 +40,28 @@
 </head>
 <body>
 
-  <!-- Loader (pantalla de carga) -->
+  <!-- Loader -->
   <div id="loader">
     <div class="spinner"></div>
     <p>Cargando el modelo 3D del Cilindro de Gas, por favor espere...</p>
   </div>
 
-  <!-- Encabezado -->
   <header class="hero">
     <div class="hero-content">
       <h1 class="title">CILINDRO DE GAS</h1>
-      <p class="subtitle">
-        PROYECTO DE LA APLICACIÓN DE LA DERIVADA, OPTIMIZACIÓN DE MATERIALES Y COSTO DE UN CILINDRO DE GAS.
-      </p>
+      <p class="subtitle">PROYECTO DE LA APLICACIÓN DE LA DERIVADA, OPTIMIZACION DE MATERIALES Y COSTO DE UN CILINDRO DE GAS.</p>
       <button id="enterBtn" class="btn">Ver proyecto</button>
     </div>
     <div class="hero-decor"></div>
   </header>
 
-  <!-- Contenido principal -->
   <main class="container">
     <section id="info" class="card">
       <h2>Información del proyecto</h2>
       <div class="accordion">
         <button class="acc-btn">Objetivos de la Página Web</button>
         <div class="acc-content">
-          <p><strong>Objetivo General:</strong> Presentar y visualizar de manera interactiva el modelo 3D del proyecto "Cilindro de Gas", permitiendo explorar, manipular y comprender su estructura de forma dinámica.</p>
+          <p><strong>Objetivo General:</strong> Presentar y visualizar de manera interactiva el modelo 3D del proyecto "Cilindro de Gas", permitiendo explorar, manipular y comprender su estructura de manera dinámica.</p>
           <p><strong>Objetivos Específicos:</strong></p>
           <ul>
             <li>Desarrollar un visor 3D que permita rotar, acercar, alejar y cambiar el color del modelo.</li>
@@ -88,44 +85,42 @@
         <div class="acc-content">
           <p>
             En este proyecto buscamos ofrecer una experiencia interactiva diferente, desarrollando una página web que permite visualizar y explorar en 3D el modelo del proyecto "Cilindro de Gas".
-            ¡Esperamos que disfrute navegando y descubriendo cada detalle de nuestro trabajo! 😄
+¡Esperamos que disfrute navegando y descubriendo cada detalle de nuestro trabajo! :D
           </p>
         </div>
       </div>
     </section>
-
-    <!-- Sección del visor 3D -->
+    
     <section id="viewer" class="card">
-      <h2>Visor 3D</h2>
+    <h2>Visor 3D</h2>
 
-      <model-viewer id="tanque"
-        src="models/model.glb"
-        alt="Modelo Cilindro de Gas"
-        camera-controls
-        auto-rotate
-        style="width: 100%; height: 500px;">
-      </model-viewer>
+    <model-viewer id="tanque"
+                  src="models/model.glb"
+                  alt="Modelo Tanque de Gas"
+                  camera-controls
+                  auto-rotate
+                  style="width: 100%; height: 500px;">
+    </model-viewer>
+<p class="hint">
+  <strong>Instrucciones de uso del modelo 3D:</strong><br>
+  💻 <em>En computadora:</em> arrastre con el mouse para rotar, use la rueda para hacer zoom y el botón derecho para mover.<br>
+  📱 <em>En teléfono o tablet:</em> arrastre con un dedo para rotar, pellizque para acercar o alejar y use dos dedos para mover.
+</p>
 
-      <p class="hint">
-        <strong>Instrucciones de uso del modelo 3D:</strong><br>
-        💻 <em>En computadora:</em> arrastre con el mouse para rotar, use la rueda para hacer zoom y el botón derecho para mover.<br>
-        📱 <em>En teléfono o tablet:</em> arrastre con un dedo para rotar, pellizque para acercar o alejar y use dos dedos para mover.
-      </p>
     </section>
-  </main>
 
-  <!-- Pie de página -->
   <footer class="py-5 bg-dark">
     <div class="container">
       <center><p class="m-0 text-center text-white">Copyright &copy; Frank_Pp² 2025</p></center>
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Script ES Module -->
+  <script type="module" src="js/script.js"></script>
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   <script src="js/script-accordion.js"></script>
 
-  <!-- Ocultar el loader cuando cargue el modelo -->
+  <!-- Script para ocultar el loader al cargar el modelo -->
   <script>
     const viewer = document.getElementById('tanque');
     const loader = document.getElementById('loader');
@@ -134,5 +129,6 @@
       loader.style.display = 'none';
     });
   </script>
+
 </body>
 </html>
