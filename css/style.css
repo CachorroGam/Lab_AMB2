@@ -62,3 +62,19 @@ model-viewer {
 }
 
 
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw; /* Ocupa todo el ancho de la pantalla */
+  text-align: center;
+  background-color: #111;
+  color: #ccc;
+  padding: 12px 0;
+  font-size: 14px;
+  z-index: 1000; /* Asegura que quede encima del contenido */
+}
+
+.footer strong {
+  color: #00c3ff;
+}
