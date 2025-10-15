@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grupo 5 de Lab.</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="title">Tanque de Gas</h1>
+      <p class="subtitle">PROYECTO DE APLICACIÓN EN MATEMÁTICA BÁSICA 2</p>
+      <button id="enterBtn" class="btn">Ver proyecto</button>
+    </div>
+    <div class="hero-decor"></div>
+  </header>
+
+  <main class="container">
+    <section id="info" class="card">
+      <h2>Información del proyecto</h2>
+      <div class="accordion">
+        <button class="acc-btn">Objetivos de la Pagina</button>
+        <div class="acc-content">
+          <p><strong>Objetivo General:</strong> Presentar y visualizar de manera interactiva el modelo 3D del proyecto "Tanque de Gas", permitiendo explorar, manipular y comprender su estructura de manera dinámica.</p>
+          <p><strong>Objetivos Específicos:</strong></p>
+          <ul>
+            <li>Desarrollar un visor 3D que permita rotar, acercar, alejar y cambiar el color del modelo.</li>
+            <li>Garantizar la compatibilidad y accesibilidad del sitio en diferentes dispositivos y navegadores.</li>
+            <li>Evaluar la experiencia para asegurar que la navegación y la interacción con el modelo sean intuitivas.</li>
+          </ul>
+        </div>
+
+        <button class="acc-btn">Integrantes</button>
+        <div class="acc-content">
+          <ul>
+            <li>Ismar Carlos Emilio García Choxom</li>
+            <li>Erick Anderson Tacam Tzoc</li>
+            <li>Pedro Gaspar Chan Cux</li>
+            <li>Vicenta Gabriela Yanira Saquic Lol</li>
+            <li>Franklin Hugo Armando Pop Pop</li>
+          </ul>
+        </div>
+
+        <button class="acc-btn">Descripción</button>
+        <div class="acc-content">
+          <p>
+            Al realizar este proyecto, queremos hacer algo diferente, entonces se realizó la siguiente página para que se pueda visualizar el modelo 3D del proyecto "Tanque de Gas".
+            Espero que le guste :D
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <section id="viewer" class="card">
+    <h2>Visor 3D</h2>
+
+    <model-viewer src="models/model.glb"
+                    alt="Modelo Tanque de Gas"
+                    camera-controls
+                    auto-rotate
+                    style="width: 100%; height: 500px;">
+    </model-viewer>
+
+    <p class="hint">Use el mouse: arrastrar para rotar, scroll para hacer zoom, botón derecho para mover.</p>
+    </section>
+
+
+
+
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <center><p class="m-0 text-center text-white">Copyright &copy; Frank_Pp² 2025</p></center>
+    </div>
+  </footer>
+
+  <!-- Script ES Module -->
+  <script type="module" src="js/script.js"></script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <script src="js/script-accordion.js"></script>
+
+</body>
+</html>
